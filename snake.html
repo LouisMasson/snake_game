@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 2px solid #333;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .score-container {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            gap: 40px;
+        }
+        .controls {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+        }
+        .high-score {
+            color: #4CAF50;
+        }
+        .level-info {
+            color: #2196F3;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .skin-selector {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .skin-option {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .skin-option:hover {
+            transform: scale(1.1);
+        }
+        .skin-option.selected {
+            border-color: #4CAF50;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Snake Game</h1>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div class="score-container">
+        <div>Score: <span id="score">0</span></div>
+        <div class="high-score">High Score: <span id="highScore">0</span></div>
+    </div>
+    <div class="level-info">Level: <span id="level">1</span></div>
+    <div class="skin-selector">
+        <div>Snake Skin:</div>
+        <div class="skin-option selected" style="background: linear-gradient(45deg, #4CAF50, #81C784)" data-skin="classic"></div>
+        <div class="skin-option" style="background: linear-gradient(45deg, #FF9800, #FFB74D)" data-skin="fire"></div>
+        <div class="skin-option" style="background: linear-gradient(45deg, #2196F3, #64B5F6)" data-skin="ice"></div>
+        <div class="skin-option" style="background: linear-gradient(45deg, #9C27B0, #BA68C8)" data-skin="neon"></div>
+        <div class="skin-option" style="background: linear-gradient(45deg, #F44336, #E57373)" data-skin="lava"></div>
+    </div>
+    <div class="controls">
+        <p>Use arrow keys to move the snake</p>
+        <p>Press Space to pause/resume</p>
+        <p>Press Enter to restart</p>
+    </div>
+
+    <script src="snake.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - Test Mode</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 2px solid #333;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .score-container {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .controls {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+        }
+        .test-mode {
+            background-color: #ffe0e0;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .test-instructions {
+            margin-top: 10px;
+            text-align: left;
+            max-width: 400px;
+            font-size: 14px;
+        }
+        .test-instructions li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Snake Game - Test Mode</h1>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div class="score-container">Score: <span id="score">0</span></div>
+    <div class="controls">
+        <p>Use arrow keys to move the snake</p>
+        <p>Press Space to pause/resume</p>
+    </div>
+    
+    <div class="test-mode">
+        <h3>Test Mode Active</h3>
+        <p>Please check browser console for test results (F12 or Cmd+Option+I)</p>
+        <div class="test-instructions">
+            <p>Manual Test Instructions:</p>
+            <ol>
+                <li>Press an arrow key to start the game</li>
+                <li>Verify snake moves in the direction of arrow key pressed</li>
+                <li>Collect food to verify score increases</li>
+                <li>Verify background color changes when food is collected</li>
+                <li>Hit a wall to verify game over screen appears</li>
+                <li>Press Enter to verify game restarts</li>
+                <li>Press Space during gameplay to verify pause functionality</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="snake.js"></script>
+    <script src="test-snake.js"></script>
+</body>
+</html>
