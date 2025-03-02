@@ -1,0 +1,26 @@
+# Fichiers système macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Miniatures
+._*
+
+# Dossiers potentiellement créés sur les partages AFP distants
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Fichiers de configuration IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Fichiers de logs
+*.log
+
+# Dépendances (si vous en ajoutez plus tard)
+/node_modules

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <meta http-equiv="refresh" content="0; URL=snake.html">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #4CAF50;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loader"></div>
+        <p>Redirection vers le jeu Snake...</p>
+        <p>Si la redirection ne fonctionne pas, <a href="snake.html">cliquez ici</a>.</p>
+    </div>
+</body>
+</html>
